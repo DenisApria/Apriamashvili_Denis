@@ -1,0 +1,11 @@
+<div *ngFor="let user of users">
+  <div *ngIf="user.Age > 20">
+    <p>Firstname: {{ user.Firstname }}</p>
+    <p>Lastname: {{ user.Lastname }}</p>
+    <p>Age: {{ user.Age }}</p><br>
+  </div>
+</div>
+
+
+<app-user [users]="parentUser"></app-user>
+

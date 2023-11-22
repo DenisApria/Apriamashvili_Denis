@@ -1,0 +1,24 @@
+<div *ngFor="let user of users">
+  <h1>Array from parent component</h1>
+  <p>Id: {{ user.Id }}</p>
+  <p>Firstname: {{ user.Firstname }}</p>
+  <p>Lastname: {{ user.Lastname }}</p>
+  <p>Dateofbirth: {{ user.Dateofbirth }}</p>
+  <p>Phone Number: {{ user.Phonenumber }}</p>
+  <p>Email: {{ user.Email }}</p><br>
+</div>
+
+<div *ngFor="let user of childUsers">
+  <h1>Array from child component</h1>
+  <p>Id: {{ user.Id }}</p>
+  <p>Firstname: {{ user.Firstname }}</p>
+  <p>Lastname: {{ user.Lastname }}</p>
+  <p>Date of Birth: {{ user.Dateofbirth }}</p>
+  <p>Phone Number: {{ user.Phonenumber }}</p>
+  <p>Email: {{ user.Email }}</p><br>
+</div>
+
+
+<button (click)="emitUsersToParent()">Emit Users to Parent</button>
+<br>
+<button (click)="displayUsersUsingService()">Display Users using Service</button>
